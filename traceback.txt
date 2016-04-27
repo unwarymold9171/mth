@@ -1,21 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 65, in script
-    jump end
-ScriptError: could not find label 'end'.
+  File "game/script.rpy", line 45, in script
+    if tutorials_first_time:
+  File "game/script.rpy", line 45, in <module>
+    if tutorials_first_time:
+NameError: name 'tutorials_first_time' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 65, in script
-    jump end
-  File "D:\renpy-6.99.8-sdk\renpy\ast.py", line 1519, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\renpy-6.99.8-sdk\renpy\script.py", line 843, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'end'.
+  File "game/script.rpy", line 45, in script
+    if tutorials_first_time:
+  File "C:\Users\Niky\Desktop\renpy-6.99.8-sdk\renpy\ast.py", line 1648, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Niky\Desktop\renpy-6.99.8-sdk\renpy\python.py", line 1606, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Niky\Desktop\renpy-6.99.8-sdk\renpy\python.py", line 1601, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 45, in <module>
+    if tutorials_first_time:
+NameError: name 'tutorials_first_time' is not defined
 
 Windows-8-6.2.9200
-Ren'Py 6.99.8.959
+Ren'Py 6.99.10.1227
 mth 0.0
