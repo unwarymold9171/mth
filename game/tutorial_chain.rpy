@@ -7,12 +7,10 @@
 define e = Character('Eileen', color="#c8ffc8")
 
 # The game starts here.
-label chain:
+label tutorial_chain:
 
     e "You've created a new Ren'Py game."
     #stuff
     e "Once you add a story, pictures, and music, you can release it to the world!"
-    $ tutorials_adjustment = ui.adjustment()
-    call screen tutorials(adj=tutorials_adjustment)
 
     return
