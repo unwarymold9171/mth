@@ -4,7 +4,7 @@
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define e = Character('Eileen', color="#c8ffc8")
+define s = Character('Senpai', color="#c8ffc8")
 
 init python:
     tutorials = [
@@ -39,8 +39,8 @@ label start:
     
     $ tutorials_first_time = True
     
-    e "Hi! My name is Eileen, and I'd like to welcome you to the Ren'Py tutorial."
-    e "In this tutorial, we'll teach you the basics of Ren'Py, so you can make games of your own. We'll also demonstrate many features, so you can see what Ren'Py is capable of."
+    s "Hi! My name is Eileen, and I'd like to welcome you to the Ren'Py tutorial."
+    s "In this tutorial, we'll teach you the basics of Ren'Py, so you can make games of your own. We'll also demonstrate many features, so you can see what Ren'Py is capable of."
     
     
     $ tutorials_adjustment = ui.adjustment()
@@ -48,9 +48,9 @@ label start:
 label tutorials:
 
     if tutorials_first_time:
-        $ e(_("What would you like to see?"), interact=False)
+        $ s(_("What would you like to see?"), interact=False)
     else:
-        $ e(_("Is there anything else you'd like to see?"), interact=False)
+        $ s(_("Is there anything else you'd like to see?"), interact=False)
 
     $ tutorials_first_time = False
 
