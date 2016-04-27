@@ -1,23 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-ScriptError: Name u'start' is defined twice, at game/script.rpy:38 and game/tutorial_chain.rpy:10.
+  File "game/script.rpy", line 65, in script
+    jump end
+ScriptError: could not find label 'end'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\renpy-6.99.8-sdk\renpy\bootstrap.py", line 281, in bootstrap
-    renpy.main.main()
-  File "D:\renpy-6.99.8-sdk\renpy\main.py", line 351, in main
-    renpy.game.script.load_script() # sets renpy.game.script.
-  File "D:\renpy-6.99.8-sdk\renpy\script.py", line 259, in load_script
-    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
-  File "D:\renpy-6.99.8-sdk\renpy\script.py", line 738, in load_appropriate_file
-    self.finish_load(stmts, initcode, filename=fn + source)
-  File "D:\renpy-6.99.8-sdk\renpy\script.py", line 414, in finish_load
-    bad_node.filename, bad_node.linenumber))
-ScriptError: Name u'start' is defined twice, at game/script.rpy:38 and game/tutorial_chain.rpy:10.
+  File "game/script.rpy", line 65, in script
+    jump end
+  File "D:\renpy-6.99.8-sdk\renpy\ast.py", line 1519, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\renpy-6.99.8-sdk\renpy\script.py", line 843, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'end'.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.8.959
- 
+mth 0.0

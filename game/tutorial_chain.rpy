@@ -4,7 +4,7 @@
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define e = Character('Eileen', color="#c8ffc8")
+#define e = Character('Eileen', color="#c8ffc8")
 
 # The game starts here.
 label tutorial_chain:

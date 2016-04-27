@@ -36,11 +36,29 @@ screen tutorials:
 
 # The game starts here.
 label start:
-
+    
+    $ tutorials_first_time = True
+    
     e "You've created a new Ren'Py game."
     #stuff
     e "Once you add a story, pictures, and music, you can release it to the world!"
     $ tutorials_adjustment = ui.adjustment()
-    call screen tutorials(adj=tutorials_adjustment)
+    #call screen tutorials(adj=tutorials_adjustment)
+    
+    while True:
+
+        if tutorials_first_time:
+            $ e(_("What would you like to see?"), interact=False)
+        else:
+            $ e(_("Is there anything else you'd like to see?"), interact=False)
+
+        $ tutorials_first_time = False
+
+        call screen tutorials(adj=tutorials_adjustment)
+
+        if _return is False:
+            jump end
+
+        call expression _return
 
     return
