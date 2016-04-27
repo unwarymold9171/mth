@@ -11,7 +11,7 @@ define e = Character('Eileen', color="#c8ffc8")
 label start:
 
     e "You've created a new Ren'Py game."
-
+#stuff
     e "Once you add a story, pictures, and music, you can release it to the world!"
 
     return
