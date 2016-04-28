@@ -60,12 +60,14 @@ label splashscreen:
             "Teacher":
                 $ mp.option = "Teacher"
                 $ mp.modeSelected = True
+                $ mp.route = 10
                 $ mp.save()
                 return
                 
             "Student":
                 $ mp.option = "Student"
                 $ mp.modeSelected = True
+                $ mp.route = 0
                 $ mp.save()
                 return
     
@@ -79,10 +81,7 @@ label start:
     if(mp.option == "Teacher"):
         jump tutorials
     else:
-        s "You cannot use this yet."
-        jump end
-    
-    
+        jump tutorial_product
     
 label tutorials:
 
@@ -111,6 +110,7 @@ label end:
     
     s "I will reset this for you."
     $ mp.modeSelected = False
+    $ mp.save()
     
     window hide
     

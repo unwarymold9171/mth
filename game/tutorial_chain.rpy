@@ -12,5 +12,11 @@ label tutorial_chain:
     s "You've created a new Ren'Py game."
     #stuff
     s "Once you add a story, pictures, and music, you can release it to the world!"
-
+    
+    if  mp.option == "Student" and mp.route == 1:
+        $ mp.route = 2
+        $ mp.save()
+        jump tutorial_quotient
+    elif mp.option == "Student":
+        jump start
     return

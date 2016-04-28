@@ -2,8 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 77: expected ':' not found.
-    else(mp.options == "Student")
-        ^
+File "game/tutorial_product.rpy", line 20: reached end of line when expecting ':'.
+    if  mp.option == "Student" and mp.route == 0
+                                                ^
+
+File "game/tutorial_product.rpy", line 23: expected statement.
+    elif mp.option == "Student"
+           ^
 
 Ren'Py Version: Ren'Py 6.99.8.959
