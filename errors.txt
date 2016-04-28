@@ -2,12 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 55: reached end of line when expecting ':'.
-    if option = 1
-                 ^
-
-File "game/script.rpy", line 57: reached end of line when expecting ':'.
-    if option = 2
-                 ^
+File "game/script.rpy", line 48: expected statement.
+    ""(_("What would you like to see?"), interact=False)
+                                                        ^
 
 Ren'Py Version: Ren'Py 6.99.8.959

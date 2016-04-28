@@ -9,7 +9,6 @@ define s = Character('Senpai', color="#c8ffc8")
 #########################
 # TODO: 
 #       create routes
-#       add question to student vs teacher pre-menu choice
 #       implement student vs teacher
 #########################
 
@@ -44,6 +43,8 @@ screen tutorials:
 # The game starts here.
 
 label splashscreen:
+    
+    $ s(_("What are you?"), interact=False)
     
     menu:
         "Teacher":

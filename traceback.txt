@@ -3,24 +3,26 @@
 While running game code:
   File "renpy/common/00start.rpy", line 172, in script call
     call expression "splashscreen" from _call_splashscreen_1
-  File "game/script.rpy", line 55, in script
-    if option = 1:
-SyntaxError: invalid syntax (game/script.rpy, line 55)
+  File "game/script.rpy", line 48, in script
+    $ ""(_("What would you like to see?"), interact=False)
+  File "game/script.rpy", line 48, in <module>
+    $ ""(_("What would you like to see?"), interact=False)
+TypeError: 'str' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "renpy/common/00start.rpy", line 172, in script call
     call expression "splashscreen" from _call_splashscreen_1
-  File "game/script.rpy", line 55, in script
-    if option = 1:
-  File "C:\Users\STEM-Student\Desktop\renpy-6.99.8.7z\renpy-6.99.8-sdk\renpy\ast.py", line 1647, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\STEM-Student\Desktop\renpy-6.99.8.7z\renpy-6.99.8-sdk\renpy\python.py", line 1489, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\STEM-Student\Desktop\renpy-6.99.8.7z\renpy-6.99.8-sdk\renpy\python.py", line 512, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/script.rpy, line 55)
+  File "game/script.rpy", line 48, in script
+    $ ""(_("What would you like to see?"), interact=False)
+  File "C:\Users\STEM-Student\Desktop\renpy-6.99.8.7z\renpy-6.99.8-sdk\renpy\ast.py", line 805, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\STEM-Student\Desktop\renpy-6.99.8.7z\renpy-6.99.8-sdk\renpy\python.py", line 1461, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 48, in <module>
+    $ ""(_("What would you like to see?"), interact=False)
+TypeError: 'str' object is not callable
 
 Windows-8-6.2.9200
 Ren'Py 6.99.8.959
