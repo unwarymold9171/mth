@@ -13,7 +13,7 @@ label tutorial_quotient:
     #stuff
     s "Once you add a story, pictures, and music, you can release it to the world!"
     
-    $ mp.route = 3
+    $ mp.route = 2
     $ mp.save()
     
     jump tutorial

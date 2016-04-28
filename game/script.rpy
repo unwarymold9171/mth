@@ -1,21 +1,20 @@
-﻿# You can place the script of your game in this file.
+﻿#########################
+# TODO: 
+#       create routes
+#       implement student vs teacher
+#Fix atend of project:
+#       remove the autoreset
+#########################
+
+init python:
+    mp = MultiPersistent("MTH.TeachingMode")
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define s = Character('Senpai', color="#c8ffc8")
+define s = Character(mp.sName, color="#c8ffc8")
 
-#########################
-# TODO: 
-#       create routes
-#       implement student vs teacher
-#Fix atend of project:
-#       remode the autoreset
-#########################
-
-init python:
-    mp = MultiPersistent("MTH.TeachingMode")
 
 # The game starts here.
 label splashscreen:
@@ -31,6 +30,7 @@ label splashscreen:
                 $ mp.modeSelected = True
                 $ mp.route = 10
                 $ mp.tutorials_first_time = True
+                $ mp.sName = "Student"
                 $ mp.save()
                 return
                 
@@ -39,6 +39,7 @@ label splashscreen:
                 $ mp.modeSelected = True
                 $ mp.route = 0
                 $ mp.tutorials_first_time = True
+                $ mp.sName = "Senpai"
                 $ mp.save()
                 return
     

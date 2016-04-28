@@ -20,7 +20,7 @@ label tutorial_chain:
     #text n stuff
     
     
-    $ mp.route = 2
+    $ mp.route = 3
     $ mp.save()
     
     jump tutorial

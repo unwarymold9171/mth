@@ -1,0 +1,6 @@
+tmp/navigation.json
+*.txt
+game/saves/persistent
+game/saves/auto-8-LT1.save
+*.save
+tmp/navigation.json
