@@ -78,7 +78,7 @@ label start:
     s "Hi! My name is Senpai, and I'd like to welcome you to mth dervaderv tutorial."
     s "In this tutorial, we'll teach you how to do the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
     
-    if(mp.option == "Teacher"):
+    if mp.option == "Teacher" :
         jump tutorials
     else:
         jump tutorial_product
