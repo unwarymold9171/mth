@@ -13,7 +13,9 @@ init python:
 # eg. image eileen happy = "eileen_happy.png"
 
 # Declare characters used by this game.
-define s = Character(mp.sName, color="#c8ffc8")
+define textless = Character('', color="#000000")
+define s = Character("[mp.sName]", color="#c8ffc8")
+define player = Character("[mp.playerName]")
 
 
 # The game starts here.
@@ -22,8 +24,7 @@ label splashscreen:
     if mp.modeSelected == True:
         return
     else:
-        $ s(_("What are you?"), interact=False)
-        
+        $ textless(_("What are you?"), interact=False)
         menu:
             "Teacher":
                 $ mp.option = "Teacher"
@@ -47,23 +48,44 @@ label start:
     
     $ tutorials_first_time = True
     
-    s "Hi! My name is Senpai, and I'd like to welcome you to mth dervaderv tutorial."
-    s "In this tutorial, we'll teach you how to do the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
-    
-    if mp.option == "Teacher" :
-        jump tutorial
+    if mp.route == 0 or mp.route == 10:
+        if mp.route == 0:
+            $ mp.playerName = renpy.input("What is your name?")
+            $ mp.playerName = mp.playerName.strip()
+            if not mp.playerName:
+                $ mp.playerName = "Pat Smith"
+            $ mp.save()
+        else:
+            $ mp.playerName = "Teacher"
+            $ mp.save()
+        
+        
+        s "Hi! My name is [mp.sName], and I'd like to welcome you to mth dervaderv tutorial."
+        
+        if mp.route == 0:
+            s "What is your name?" 
+            player "My name is [mp.playerName]."
+        
+        s "Okay, [mp.playerName]. In this tutorial, we'll teach the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
     else:
-        jump tutorial_product
+        s "Welcome back, [mp.playerName]. "
+        if mp.route == 1:
+            extend "I have so far taught you the Product Rule"
+        elif mp.route == 2:
+            extend "I have so far taught you the Product Rule and the Quotient Rule"
+        elif mp.route == 3:
+            extend "I have so far taught you all three of the rules"
+    
+    jump tutorial
     
 label tutorial:
     
-    if mp.tutorials_first_time:
+    if tutorials_first_time:
         $ s(_("What would you like to see?"), interact=False)
     else:
         $ s(_("Is there anything else you'd like to see?"), interact=False)
     
-    $ mp.tutorials_first_time = False
-    $ mp.save()
+    $ tutorials_first_time = False
     
     if mp.route == 0:
         jump tutorial_product
