@@ -6,6 +6,11 @@
 # Declare characters used by this game.
 define s = Character('Senpai', color="#c8ffc8")
 
+#########################
+# TODO: 
+#       add an option for teacher and student viewing
+#########################
+
 init python:
     tutorials = [
         ("tutorial_product", _("Product Rule")),
@@ -39,9 +44,8 @@ label start:
     
     $ tutorials_first_time = True
     
-    s "Hi! My name is Eileen, and I'd like to welcome you to the Ren'Py tutorial."
-    s "In this tutorial, we'll teach you the basics of Ren'Py, so you can make games of your own. We'll also demonstrate many features, so you can see what Ren'Py is capable of."
-    
+    s "Hi! My name is Senpai, and I'd like to welcome you to mth dervaderv tutorial."
+    s "In this tutorial, we'll teach you how to do the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
     
     $ tutorials_adjustment = ui.adjustment()
     
@@ -64,5 +68,10 @@ label tutorials:
     jump tutorials
 
 label end:
-
+    
+    s "..."
+    s "Thank you for viewing this tutorial."
+    
+    window hide
+    
     return

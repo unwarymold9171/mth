@@ -9,7 +9,7 @@
 # The game starts here.
 label tutorial_product:
 
-    s "You've created a new Ren'Py game."
+    s "So, you want to learn about the product rule."
     s "Once you add a story, pictures, and music, you can release it to the world!"
 
     return

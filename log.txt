@@ -1,11 +1,11 @@
-Wed Apr 27 16:39:06 2016
+Wed Apr 27 19:33:25 2016
 Windows-8-6.2.9200
 Ren'Py 6.99.10.1227
  
 
 Bootstrap to the start of init.init took 0.07s
 Early init took 0.02s
-Loader init took 0.01s
+Loader init took 0.02s
 Loading error handling took 0.02s
 Loading script took 0.12s
 Loading persistent took 0.01s
@@ -25,13 +25,13 @@ Init translation took 0.00s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.05s
+Save screen analysis took 0.04s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.00s
+Interface start took 0.01s
 
 primary display bounds: (0, 0, 1920, 1080)
 Windowed mode.
@@ -382,18 +382,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 0.909999847412s
+Total time until interface ready: 0.920000076294s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.056000 seconds.
-- Frame drawn at 0.057000 seconds.
+- Frame drawn at 0.065000 seconds.
+- Frame drawn at 0.066000 seconds.
 - Frame drawn at 0.066000 seconds.
 - Frame drawn at 0.082000 seconds.
 - 0.082000 seconds to render 5 frames.
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
