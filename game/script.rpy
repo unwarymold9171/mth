@@ -15,10 +15,41 @@ define s = Character('Senpai', color="#c8ffc8")
 #########################
 
 init python:
+    tutorials = [
+        ("tutorial_product", _("Product Rule")),
+        ("tutorial_quotient", _("Quotient Rule")),
+        ("tutorial_chain", _("Chain Rule")),
+        ]
+    
+init python:
     mp = MultiPersistent("MTH.TeachingMode")
 
+screen tutorials:
+
+    side "c r":
+        area (250, 40, 548, 400)
+
+        viewport:
+            yadjustment adj
+            vbox:
+                for label, name in tutorials:
+                    button:
+                        action Return(label)
+                        left_padding 20
+                        xfill True
+                        hbox:
+                            text name style "button_text" min_width 420
+                null height 20
+                textbutton _("That's enough for now."):
+                    xfill True
+                    action Return(False)
+
+
 # The game starts here.
+
 label splashscreen:
+    
+    
     
     if mp.modeSelected == True:
         return
@@ -30,7 +61,6 @@ label splashscreen:
                 $ mp.option = "Teacher"
                 $ mp.modeSelected = True
                 $ mp.route = 10
-                $ mp.tutorials_first_time = True
                 $ mp.save()
                 return
                 
@@ -38,7 +68,6 @@ label splashscreen:
                 $ mp.option = "Student"
                 $ mp.modeSelected = True
                 $ mp.route = 0
-                $ mp.tutorials_first_time = True
                 $ mp.save()
                 return
     
@@ -50,51 +79,29 @@ label start:
     s "In this tutorial, we'll teach you how to do the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
     
     if mp.option == "Teacher" :
-        jump tutorial
+        jump tutorials
     else:
         jump tutorial_product
     
-label tutorial:
-    
-    if mp.tutorials_first_time:
+label tutorials:
+
+    $ tutorials_adjustment = ui.adjustment()
+
+    if tutorials_first_time:
         $ s(_("What would you like to see?"), interact=False)
     else:
         $ s(_("Is there anything else you'd like to see?"), interact=False)
-    
-    $ mp.tutorials_first_time = False
-    $ mp.save()
-    
-    if mp.route == 0:
-        jump tutorial_product
-    
-    elif mp.route == 1:
-        menu:
-            "Product Rule":
-                jump tutorial_product
-            "Something New":
-                jump tutorial_quotient
-            "That's enough for now.":
-                jump end
-    elif mp.route == 2:
-        menu:
-            "Product Rule":
-                jump tutorial_product
-            "Quotient Rule":
-                jump tutorial_quotient
-            "Something New":
-                jump tutorial_chain
-            "That's enough for now.":
-                jump end
-    else:
-        menu:
-            "Product Rule":
-                jump tutorial_product
-            "Quotient Rule":
-                jump tutorial_quotient
-            "Chain Rule":
-                jump tutorial_chain
-            "That's enough for now.":
-                jump end
+
+    $ tutorials_first_time = False
+
+    call screen tutorials(adj=tutorials_adjustment)
+
+    if _return is False:
+        jump end
+
+    call expression _return
+
+    jump tutorials
 
 label end:
     

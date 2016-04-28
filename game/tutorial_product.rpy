@@ -16,7 +16,10 @@ label tutorial_product:
     
     s "Once you add a story, pictures, and music, you can release it to the world!"
     
-    $ mp.route = 1
-    $ mp.save()
-    
-    jump tutorial
+    if  mp.option == "Student" and mp.route == 0:
+        $ mp.route = 1
+        $ mp.save()
+        jump tutorial_chain
+    elif mp.option == "Student":
+        jump start
+    return

@@ -13,7 +13,10 @@ label tutorial_quotient:
     #stuff
     s "Once you add a story, pictures, and music, you can release it to the world!"
     
-    $ mp.route = 3
-    $ mp.save()
-    
-    jump tutorial
+    if  mp.option == "Student" and mp.route == 2:
+        $ mp.route = 3
+        $ mp.save()
+        jump end
+    elif mp.option == "Student":
+        jump start
+    return
