@@ -19,6 +19,9 @@ init python:
         ("tutorial_chain", _("Chain Rule")),
         ]
     
+init python:
+    mp = MultiPersistent("MTH.TeachingMode")
+
 screen tutorials:
 
     side "c r":
@@ -44,14 +47,25 @@ screen tutorials:
 
 label splashscreen:
     
-    $ s(_("What are you?"), interact=False)
     
-    menu:
-        "Teacher":
-            $ option = "Teacher"
-            
-        "Student":
-            $ option = "Student"
+    
+    if mp.modeSelected == True:
+        return
+    else:
+        $ s(_("What are you?"), interact=False)
+        
+        menu:
+            "Teacher":
+                $ mp.option = "Teacher"
+                $ mp.modeSelected = True
+                $ mp.save()
+                return
+                
+            "Student":
+                $ mp.option = "Student"
+                $ mp.modeSelected = True
+                $ mp.save()
+                return
     
 label start:
     
@@ -60,9 +74,17 @@ label start:
     s "Hi! My name is Senpai, and I'd like to welcome you to mth dervaderv tutorial."
     s "In this tutorial, we'll teach you how to do the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
     
-    $ tutorials_adjustment = ui.adjustment()
+    if(mp.option == "Teacher"):
+        jump tutorials
+    else:
+        s "You cannot use this yet."
+        jump end
+    
+    
     
 label tutorials:
+
+    $ tutorials_adjustment = ui.adjustment()
 
     if tutorials_first_time:
         $ s(_("What would you like to see?"), interact=False)
@@ -84,6 +106,9 @@ label end:
     
     s "..."
     s "Thank you for viewing this tutorial."
+    
+    s "I will reset this for you."
+    $ mp.modeSelected = False
     
     window hide
     

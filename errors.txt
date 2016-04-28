@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 48: expected statement.
-    ""(_("What would you like to see?"), interact=False)
-                                                        ^
+File "game/script.rpy", line 77: expected ':' not found.
+    else(mp.options == "Student")
+        ^
 
 Ren'Py Version: Ren'Py 6.99.8.959
