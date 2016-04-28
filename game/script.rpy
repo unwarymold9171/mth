@@ -10,6 +10,8 @@ define s = Character('Senpai', color="#c8ffc8")
 # TODO: 
 #       create routes
 #       implement student vs teacher
+#Fix atend of project:
+#       remode the autoreset
 #########################
 
 init python:
