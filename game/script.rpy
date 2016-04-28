@@ -8,7 +8,9 @@ define s = Character('Senpai', color="#c8ffc8")
 
 #########################
 # TODO: 
-#       add an option for teacher and student viewing
+#       create routes
+#       add question to student vs teacher pre-menu choice
+#       implement student vs teacher
 #########################
 
 init python:
@@ -40,6 +42,16 @@ screen tutorials:
 
 
 # The game starts here.
+
+label splashscreen:
+    
+    menu:
+        "Teacher":
+            $ option = "Teacher"
+            
+        "Student":
+            $ option = "Student"
+    
 label start:
     
     $ tutorials_first_time = True
