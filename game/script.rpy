@@ -1,11 +1,9 @@
-﻿#########################
-# TODO: 
-#       create routes
-#       implement student vs teacher
-#       Fix atend of project:
-#       remove the autoreset
-#
-#########################
+﻿##################################################
+# TODO:                                          #
+#       create routes                            #
+#       implement student vs teacher             #
+#       Fix atend of project:                    #
+##################################################
 
 init python:
     mp = MultiPersistent("MTH.TeachingMode")
@@ -135,10 +133,6 @@ label end:
     
     s "..."
     s "Thank you for viewing this tutorial."
-    
-    s "I will reset this for you."
-    $ mp.modeSelected = False
-    $ mp.save()
     
     window hide
     
