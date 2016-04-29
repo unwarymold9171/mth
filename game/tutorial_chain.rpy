@@ -4,23 +4,20 @@
 #       add text n stuff
 #33333333333333333333333333333333333333333333333333333333333333333333333333333333333
 
-# The game starts here.
+# The route starts here.
 label tutorial_chain:
 
-    s "You've created a new Ren'Py game."
-    #stuff
-    s "Once you add a story, pictures, and music, you can release it to the world!"
+    if  mp.option == "Teacher":
+        s "So, you want me to teach the chain rule."
+    elif mp.route == 0:
+        s "Okay I will first start by teaching you the chain rule."
+    else:
+        s "So, you want to review the chain rule."
     
-    if  mp.option == "Student" and mp.route == 1:
-        $ mp.route = 2
+    s "Once you add a story, pictures, and dank memes, you can release it to the world!"
+    
+    if mp.route == 2:
+        $ mp.route = 3
         $ mp.save()
-        jump tutorial_quotient
-
-    
-    #text n stuff
-    
-    
-    $ mp.route = 3
-    $ mp.save()
     
     jump tutorial
