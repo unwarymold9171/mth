@@ -9,11 +9,17 @@
 # The game starts here.
 label tutorial_quotient:
 
-    s "You've created a new Ren'Py game."
-    #stuff
+    if  mp.option == "Teacher":
+        s "So, you want me to teach the quotient rule."
+    elif mp.route == 1:
+        s "Okay I will first start by teaching you the quotient rule."
+    else:
+        s "So, you want to review the quotient rule."
+    
     s "Once you add a story, pictures, and music, you can release it to the world!"
     
-    $ mp.route = 2
-    $ mp.save()
+    if mp.route == 1:
+        $ mp.route = 2
+        $ mp.save()
     
     jump tutorial

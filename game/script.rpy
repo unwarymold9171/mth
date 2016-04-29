@@ -89,36 +89,36 @@ label tutorial:
     
     if mp.route == 0:
         menu:
-            "Something New":
+            "Something new":
                 jump tutorial_product
             "That's enough for now.":
                 jump end
     
     elif mp.route == 1:
         menu:
-            "Product Rule":
+            "Product rule":
                 jump tutorial_product
-            "Something New":
+            "Something new":
                 jump tutorial_quotient
             "That's enough for now.":
                 jump end
     elif mp.route == 2:
         menu:
-            "Product Rule":
+            "Product rule":
                 jump tutorial_product
-            "Quotient Rule":
+            "Quotient rule":
                 jump tutorial_quotient
-            "Something New":
+            "Something new":
                 jump tutorial_chain
             "That's enough for now.":
                 jump end
     else:
         menu:
-            "Product Rule":
+            "Product rule":
                 jump tutorial_product
-            "Quotient Rule":
+            "Quotient rule":
                 jump tutorial_quotient
-            "Chain Rule":
+            "Chain rule":
                 jump tutorial_chain
             "That's enough for now.":
                 jump end
