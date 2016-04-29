@@ -88,7 +88,11 @@ label tutorial:
     $ tutorials_first_time = False
     
     if mp.route == 0:
-        jump tutorial_product
+        menu:
+            "Something New":
+                jump tutorial_product
+            "That's enough for now.":
+                jump end
     
     elif mp.route == 1:
         menu:
