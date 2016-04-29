@@ -2,8 +2,9 @@
 # TODO: 
 #       create routes
 #       implement student vs teacher
-#Fix atend of project:
+#       Fix atend of project:
 #       remove the autoreset
+#
 #########################
 
 init python:
@@ -17,7 +18,14 @@ define textless = Character('', color="#000000")
 define s = Character("[mp.sName]", color="#c8ffc8")
 define player = Character("[mp.playerName]")
 
-
+label reset:
+    
+    textless "Reseting modeSelected"
+    $ mp.modeSelected = False
+    $ mp.save()
+    textless "Jumping to splashcrween"
+    jump splashscreen
+    
 # The game starts here.
 label splashscreen:
     
