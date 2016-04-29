@@ -18,10 +18,10 @@ define player = Character("[mp.playerName]")
 
 label reset:
     
-    textless "Reseting modeSelected"
+    "Reseting modeSelected"
     $ mp.modeSelected = False
     $ mp.save()
-    textless "Jumping to splashcrween"
+    "Jumping to splashcrween"
     jump splashscreen
     
 # The game starts here.
