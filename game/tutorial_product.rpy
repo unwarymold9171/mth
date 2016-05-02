@@ -8,7 +8,8 @@ label tutorial_product:
     else:
         s "So, you want to review the product rule."
     
-    s "Once you add a story, pictures, and music, you can release it to the world!"
+    s "The product rule is how "
+    
     
     if mp.route == 0:
         $ mp.route = 1

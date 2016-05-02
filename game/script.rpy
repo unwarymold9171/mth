@@ -57,9 +57,11 @@ label start:
     if mp.route == 0 or mp.route == 10:
         if mp.route == 0:
             $ mp.playerName = renpy.input("What is your name?")
-            $ mp.playerName = mp.playerName.strip()
             if not mp.playerName:
-                $ mp.playerName = "Pat Smith"
+                $ mp.playerName = "Smith"
+            if mp.playerName == "your name"
+                $ mp.playerName = "[mp.sName]"
+            $ mp.playerName = mp.playerName.strip()
             $ mp.save()
         else:
             $ mp.playerName = "Teacher"
