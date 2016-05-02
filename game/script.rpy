@@ -14,7 +14,7 @@ init python:
 # Declare characters used by this game.
 define textless = Character('', color="#000000")
 define s = Character("[mp.sName]", color="#c8ffc8")
-define player = Character("[mp.playerName]")
+define p = Character("[mp.playerName]")
 
 label reset:
     
@@ -70,7 +70,7 @@ label start:
         
         if mp.route == 0:
             s "What is your name?" 
-            player "My name is [mp.playerName]."
+            p "My name is [mp.playerName]."
         
         s "Okay, [mp.playerName]. In this tutorial, we'll teach the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
     else:
