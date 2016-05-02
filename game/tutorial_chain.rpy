@@ -1,7 +1,7 @@
 ﻿#######################################
 #               TO-DO:                #
 #       browse dank memes             #
-#       add text n stuff              #
+#       git gud                       #
 #######################################
 
 # The route starts here.
