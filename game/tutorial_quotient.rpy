@@ -16,7 +16,11 @@ label tutorial_quotient:
     else:
         s "So, you want to review the quotient rule."
     
-    s "Once you add a story, pictures, and music, you can release it to the world!"
+    s "Okay, ever seen a function that you have had to take the dervderv of that was a fraction?"
+    
+    p "Yeah...I've had to do a few of those."
+    
+    p ""
     
     if mp.route == 1:
         $ mp.route = 2
