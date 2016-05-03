@@ -72,11 +72,13 @@ label start:
     if mp.route == 0 or mp.route == 10:
         if mp.route == 0:
             $ mp.playerName = renpy.input("What is your name?")
-            if not mp.playerName:
-                $ mp.playerName = "Smith"
-#            if mp.playerName == "your name"
-#                $ mp.playerName = "[mp.sName]"
             $ mp.playerName = mp.playerName.strip()
+            if not mp.playerName:
+                $ mp.playerName = "Kōhai"
+            if mp.playerName.lower() == "your name":
+                $ mp.playerName = mp.sName
+            if mp.playerName == "Kouhai"
+                $ mp.playerName = "Kōhai"
             $ mp.save()
         else:
             $ mp.playerName = "Teacher"
@@ -111,13 +113,30 @@ label tutorial:
     $ tutorials_first_time = False
     
     if mp.route == 0:
+        if mp.playerName.lower() == "kōhai":
+            menu:
+                "Why are you noticing me?":
+                    jump noticeMeSenpai
+                "Something new":
+                    jump tutorial_product
+                "That's enough for now.":
+                    jump end
         menu:
             "Something new":
                 jump tutorial_product
             "That's enough for now.":
                 jump end
-    
     elif mp.route == 1:
+        if mp.playerName.lower() == "kōhai":
+            menu:
+                "Why are you noticing me?":
+                    jump noticeMeSenpai
+                "Product rule":
+                    jump tutorial_product
+                "Something new":
+                    jump tutorial_quotient
+                "That's enough for now.":
+                    jump end
         menu:
             "Product rule":
                 jump tutorial_product
@@ -126,6 +145,18 @@ label tutorial:
             "That's enough for now.":
                 jump end
     elif mp.route == 2:
+        if mp.playerName.lower() == "kōhai":
+            menu:
+                "Why are you noticing me?":
+                    jump noticeMeSenpai
+                "Product rule":
+                    jump tutorial_product
+                "Quotient rule":
+                    jump tutorial_quotient
+                "Something new":
+                    jump tutorial_chain
+                "That's enough for now.":
+                    jump end
         menu:
             "Product rule":
                 jump tutorial_product
@@ -136,6 +167,16 @@ label tutorial:
             "That's enough for now.":
                 jump end
     else:
+        if mp.playerName.lower() == "kōhai":
+            menu:
+                "Why are you noticing me?":
+                    jump noticeMeSenpai
+                "Product rule":
+                    jump tutorial_product
+                "Quotient rule":
+                    jump tutorial_quotient
+                "Chain rule":
+                    jump tutorial_chain
         menu:
             "Product rule":
                 jump tutorial_product
@@ -145,6 +186,9 @@ label tutorial:
                 jump tutorial_chain
             "That's enough for now.":
                 jump end
+                
+label noticeMeSenpai:
+    
 
 label end:
     
