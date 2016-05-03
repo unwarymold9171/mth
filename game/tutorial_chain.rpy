@@ -17,7 +17,11 @@ label tutorial_chain:
     s "Once you add a story, pictures, and dank memes, you can release it to the world!"
     s "lel text and stuff"
     
+    
+    
     #explation of chain rule, using photos of whiteboards as backrounds
+    
+    
     
     #practice problem with answers
     

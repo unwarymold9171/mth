@@ -66,13 +66,16 @@ label start:
     
     $ tutorials_first_time = True
     
+    scene bg lecturehall
+    with fade
+    
     if mp.route == 0 or mp.route == 10:
         if mp.route == 0:
             $ mp.playerName = renpy.input("What is your name?")
             if not mp.playerName:
                 $ mp.playerName = "Smith"
-            if mp.playerName == "your name"
-                $ mp.playerName = "[mp.sName]"
+#            if mp.playerName == "your name"
+#                $ mp.playerName = "[mp.sName]"
             $ mp.playerName = mp.playerName.strip()
             $ mp.save()
         else:
