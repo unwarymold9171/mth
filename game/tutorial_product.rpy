@@ -17,7 +17,7 @@ label tutorial_product:
     #scene bg HofX
     #with fade
     
-    s ""
+    s "Now, "
     
     if mp.route == 0:
         $ mp.route = 1
