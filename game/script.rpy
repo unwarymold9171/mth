@@ -77,7 +77,7 @@ label start:
                 $ mp.playerName = "Kōhai"
             if mp.playerName.lower() == "your name":
                 $ mp.playerName = mp.sName
-            if mp.playerName == "Kouhai"
+            if mp.playerName == "Kouhai":
                 $ mp.playerName = "Kōhai"
             $ mp.save()
         else:
@@ -189,6 +189,9 @@ label tutorial:
                 
 label noticeMeSenpai:
     
+    
+    
+    jump tutorial
 
 label end:
     
