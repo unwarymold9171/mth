@@ -7,6 +7,15 @@
 
 init python:
     mp = MultiPersistent("MTH.TeachingMode")
+    
+    def swapMode():
+        if(mp.option == "Student"): 
+            mp.option = "Teacher" 
+            mp.save()
+        else: 
+            mp.option = "Student"
+            mp.save()
+        return
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
@@ -69,7 +78,7 @@ label start:
     scene bg lecturehall
     with fade
     
-    if mp.route == 0 or mp.route == 10:
+    if mp.route == 0 or mp.option == "Teacher":
         if mp.route == 0:
             $ mp.playerName = renpy.input("What is your name?")
             $ mp.playerName = mp.playerName.strip()

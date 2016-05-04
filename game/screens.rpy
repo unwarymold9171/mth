@@ -382,6 +382,14 @@ screen preferences():
                 has vbox
 
                 textbutton _("Joystick...") action Preference("joystick")
+                
+            frame:
+                style_group "pref"
+                has vbox
+
+                label _("Student Mode")
+                textbutton _([mp.option]) action Function(swapMode())
+                    
 
 
         vbox:
