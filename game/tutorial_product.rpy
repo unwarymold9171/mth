@@ -17,7 +17,12 @@ label tutorial_product:
     #scene bg HofX
     #with fade
     
-    s "Now, let's look at "
+    s "Now, let's translate this into taking the limit."
+    
+    #scene bg HofXlim
+    #with fade
+    
+    s ""
     
     if mp.route == 0:
         $ mp.route = 1
