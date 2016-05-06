@@ -8,14 +8,6 @@
 init python:
     mp = MultiPersistent("MTH.TeachingMode")
     
-    def swapMode():
-        if(mp.option == "Student"): 
-            mp.option = "Teacher" 
-            mp.save()
-        else: 
-            mp.option = "Student"
-            mp.save()
-        return
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
@@ -37,6 +29,15 @@ define textless = Character('', color="#000000")
 define s = Character("[mp.sName]", color="#c8ffc8")
 define p = Character("[mp.playerName]")
 
+label swapMode:
+        if(mp.option == "Student"): 
+            $ mp.option = "Teacher" 
+            $ mp.save()
+        else: 
+            $ mp.option = "Student"
+            $ mp.save()
+        call screen preferences()
+        
 label reset:
     
     "Reseting modeSelected"

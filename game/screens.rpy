@@ -388,8 +388,7 @@ screen preferences():
                 has vbox
 
                 label _("Student Mode")
-                textbutton _([mp.option]) action Function(swapMode())
-                    
+                textbutton _([mp.option]) action If(True, Jump("swapMode"), None)
 
 
         vbox:
