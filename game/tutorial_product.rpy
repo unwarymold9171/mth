@@ -1,5 +1,11 @@
 ﻿# Declare images below this line, using the image statement.
 #image bg HofX = "立ち絵男子③驚く-制服.png"
+#image bg HofXlim = "立ち絵男子③驚く-制服.png"
+#image bg FofXstarGofXlim = "立ち絵男子③驚く-制服.png"
+#image bg FofXstarGofXlimPlusZero = "立ち絵男子③驚く-制服.png"
+#image bg FofXstarGofXlimPlusZeroSymplefied = "立ち絵男子③驚く-制服.png"
+#image bg HofX = "立ち絵男子③驚く-制服.png"
+#image bg HofX = "立ち絵男子③驚く-制服.png"
 
 # The game starts here.
 label tutorial_product:
@@ -27,7 +33,17 @@ label tutorial_product:
     #scene bg FofXstarGofXlim
     #with fade
     
-    s "From here we need to add a special form of zero. This will be in the form of f\(x\) "
+    s "From here we need to add a special form of zero. This will be in the form of f\(x\) times g\(x + Delta x\) minus f\(x\) times g\(x + Delta x\)."
+    
+    #scene bg FofXstarGofXlimPlusZero
+    #with fade
+    
+    s "Now that can now be symplified down changing it to \[f\(x + Delta x\) minus f\(x\)\] times g\(x + Delta x\)"
+    
+    #scene bg FofXstarGofXlimPlusZeroSymplefied
+    #with fade
+    
+    s ""
     
     if mp.route == 0:
         $ mp.route = 1
