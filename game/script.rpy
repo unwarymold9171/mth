@@ -13,17 +13,10 @@ init python:
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 image bg lecturehall = im.FactorScale("lecturehall.jpg", .75)
-image bg dorm = "Dorm4.png"
-image bg dorm night = "Dorm9.png"
 image bg library = "library.png"
-image bg cafe = im.FactorScale("uncle_mugen_cafe_day.jpg", .75)
 
 image scot = "立ち絵男子①ノーマル-制服.png"
 image william = "立ち絵男子③ノーマル-制服.png"
-image william happy = "立ち絵男子③喜-制服.png"
-image willaim happy2 = "立ち絵男子③楽-制服.png"
-image william questioning = "立ち絵男子③困る-制服.png"
-image william surprised = "立ち絵男子③驚く-制服.png"
 
 # Declare characters used by this game.
 define textless = Character('', color="#000000")

@@ -99,7 +99,9 @@ label practice_product:
     with fade
         
     s "Here are three practice problems to try out"
-        
+    
+    
+    
     scene bg lecturehall
     with fade 
         
