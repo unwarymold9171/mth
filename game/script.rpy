@@ -43,35 +43,8 @@ label reset:
     "Reseting modeSelected"
     $ mp.modeSelected = False
     $ mp.save()
-    "Jumping to splashcrween"
-    jump splashscreen
     
 # The game starts here.
-label splashscreen:
-    
-    if mp.modeSelected == True:
-        return
-    else:
-        $ textless(_("What are you?"), interact=False)
-        menu:
-            "Teacher":
-                $ mp.option = "Teacher"
-                $ mp.modeSelected = True
-                $ mp.route = 10
-                $ mp.tutorials_first_time = True
-                $ mp.sName = "Student"
-                $ mp.save()
-                return
-                
-            "Student":
-                $ mp.option = "Student"
-                $ mp.modeSelected = True
-                $ mp.route = 0
-                $ mp.tutorials_first_time = True
-                $ mp.sName = "Senpai"
-                $ mp.save()
-                return
-    
 label start:
     
     $ tutorials_first_time = True
