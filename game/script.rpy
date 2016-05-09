@@ -44,7 +44,6 @@ label reset:
     $ mp.modeSelected = False
     $ mp.save()
     
-# The game starts here.
 label start:
     
     $ tutorials_first_time = True
@@ -54,7 +53,7 @@ label start:
     
     if mp.route == 0 or mp.option == "Teacher":
         if mp.route == 0:
-            $ mp.playerName = renpy.input("What is your name?")
+            $ mp.playerName = renpy.input("What is your name?","",None,'{}',25,None,None)
             $ mp.playerName = mp.playerName.strip()
             if not mp.playerName:
                 $ mp.playerName = "Kōhai"
