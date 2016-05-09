@@ -4,7 +4,9 @@
 #       implement student vs teacher             #
 #       Fix atend of project:                    #
 ##################################################
-
+# Refrence:                                      #
+#       \u205F is a math space                   #
+##################################################
 init python:
     mp = MultiPersistent("MTH.TeachingMode")
 
@@ -29,13 +31,17 @@ define s = Character("[mp.sName]", color="#c8ffc8")
 define p = Character("[mp.playerName]")
 
 label swapMode:
-        if(mp.option == "Student"): 
+        if(mp.option == "Student"): #Teacher mode change
             $ mp.option = "Teacher" 
-            $ mp.save()
-        else: 
+            $ mp.playerName = ""
+            $ mp.sName = "Student"
+            $ mp.route = 10
+        else: #Student mode change
             $ mp.option = "Student"
-            $ mp.save()
-        $ mp.route = 0
+            $ mp.playerName = ""
+            $ mp.sName = "Senpai"
+            $ mp.route = 0
+        $ mp.save()
         call screen preferences()
         
 label reset:
@@ -43,7 +49,19 @@ label reset:
     "Reseting modeSelected"
     $ mp.modeSelected = False
     $ mp.save()
-    
+
+#Remove ERRORS for Persistant Deletion
+label splashscreen:
+    if mp.modeSelected == True:
+        return
+    else:
+        $ mp.modeSelected = True
+        $ mp.option = "Student"
+        $ mp.save()
+        $ textless(_("What are you?"), interact=False)
+        return
+          
+#Game Starts here
 label start:
     
     $ tutorials_first_time = True
@@ -51,7 +69,7 @@ label start:
     scene bg lecturehall
     with fade
     
-    if mp.route == 0 or mp.option == "Teacher":
+    if (mp.route == 0 or mp.option == "Teacher") and mp.playerName == "":
         if mp.route == 0:
             $ mp.playerName = renpy.input("What is your name?","",None,'{}',25,None,None)
             $ mp.playerName = mp.playerName.strip()
