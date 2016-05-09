@@ -14,14 +14,10 @@ label tutorial_chain:
     else:
         s "So, you want to review the chain rule."
     
-    s "Once you add a story, pictures, and dank memes, you can release it to the world!"
-    s "lel text and stuff"
-    
-    s "The chain rule is used when you need to take the dervaderv of a function of a function, such as \(x + 1\)^2"
-    
     #explation of chain rule, using photos of whiteboards as backrounds
     
-    
+    s "The chain rule is used when you need to take the dervaderv of a function of a function, such as \(x + 1\)^2"
+    s "The chain rule says that if f\(x\) = g\(h\(x\)\), then f'\(x\) = g'\(h\(x\)\) * h'\(x\)"
     
     #practice problem with answers
     

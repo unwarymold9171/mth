@@ -7,7 +7,6 @@
 
 init python:
     mp = MultiPersistent("MTH.TeachingMode")
-    
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
@@ -36,6 +35,7 @@ label swapMode:
         else: 
             $ mp.option = "Student"
             $ mp.save()
+        $ mp.route = 0
         call screen preferences()
         
 label reset:
@@ -62,6 +62,8 @@ label start:
                 $ mp.playerName = mp.sName
             if mp.playerName == "Kouhai":
                 $ mp.playerName = "Kōhai"
+            if mp.playerName.lower() == "lenny face":
+                $ mp.playerName = u"\u0028\u00B0\u0361 \u035C\u0296\u00B0\u0361\u0029"
             $ mp.save()
         else:
             $ mp.playerName = "Teacher"
