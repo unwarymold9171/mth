@@ -28,17 +28,17 @@ label tutorial_product:
     #scene bg HofXlim
     #with fade
     
-    s "Now that we have it in this form we can change it from h\(x\) we can change it back to f\(x\) times g\(x\)."
+    s "Now that we have it in this form we can change it from h\(x\) we can change it back to f\(x\) * g\(x\)."
     
     #scene bg FofXstarGofXlim
     #with fade
     
-    s "From here we need to add a special form of zero. This will be in the form of f\(x\) times g\(x + Delta x\) minus f\(x\) times g\(x + Delta x\)."
+    s "From here we need to add a special form of zero. This will be in the form of f\(x\) * g\(x + \u0394x\) - f\(x\) * g\(x + \u0394x\)."
     
     #scene bg FofXstarGofXlimPlusZero
     #with fade
     
-    s "Now that can now be symplified down changing it to \[f\(x + Delta x\) minus f\(x\)\] times g\(x + Delta x\)"
+    s "Now that can now be symplified down changing it to \[f\(x + \u0394x\) - f\(x\)\] * g\(x + \u0394\)"
     
     #scene bg FofXstarGofXlimPlusZeroSymplefied
     #with fade
