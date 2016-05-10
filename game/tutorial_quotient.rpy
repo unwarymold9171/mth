@@ -22,9 +22,8 @@ label tutorial_quotient:
     
     s"A simple way to remember the quotient rule is this little ryhme. Low d high, less high d low, and don't forget to square below."
     
-    p "Yeah...I've had to do a few of those."
-    
-    p ""
+    # p "Yeah...I've had to do a few of those."
+    # p ""
     
     if mp.route == 1:
         $ mp.route = 2
