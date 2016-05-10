@@ -95,15 +95,86 @@ label tutorial_product:
                 
 label practice_product:
     
+    $ productTWrong = 0
+    $ productCWrong = 0
+    
+    s "Okay, I will write them down now."
+    
     scene bg Practice1
     with fade
         
-    s "Here are three practice problems to try out"
+    s "Here are three practice problems to try out. "
+    extend "Try them out for yourself."
     
+label practice_product1:
+    $ s(_("What do you think the answer for A is?"), interact=False)
+    menu:
+        "Yes":
+            s "Correct!"
+            scene bg Practice2
+            with dissolve
+            $ productCWrong = 0
+            jump practice_product2
+        "No":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product1
+
+label practice_product2:
+    $ s(_("What do you think the answer for B is?"), interact=False)
+    menu:
+        "Yes":
+            s "Correct!"
+            scene bg Practice3
+            with dissolve
+            $ productCWrong = 0
+            jump practice_product3
+        "No":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product2
+                
+label practice_product3:
+    $ s(_("What do you think the answer for C is?"), interact=False)
+    menu:
+        "Yes":
+            s "Correct!"
+            scene bg Practice4
+            with dissolve
+            $ productCWrong = 0
+            jump practice_product4
+        "No":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product3
+
+label practice_product4:
     
+    s "You got [productTWrong] wrong answers."
     
     scene bg lecturehall
     with fade 
+    
+    if productTWrong == 0 and mp.option == "Student":
+        s "I think you are definitely ready for the next lesson."
+        jump end_product
+    elif productTWrong <= 3 and mp.option == "Student":
+        s "I think your ready for the next lesson."
+        jump end_product
+    elif productTWrong <= 6 and mp.option == "Student":
+        s "I think you should practice more before the next lesson."
+        jump end_product
+    elif mp.option == "Student":
+        s "You need more practice before going onto the next lesson."
+        jump practice_product
+    elif productTWrong < 0:
+        s "How come you missed these problems?"
+        jump end_product
+    else:
+        s "I have no clue what to say, you broke the system."
         
 label end_product:
     
