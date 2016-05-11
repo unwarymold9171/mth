@@ -89,6 +89,8 @@ label tutorial_product:
             "Yes":
                 jump practice_product
             "No":
+                scene bg lecturehall
+                with fade 
                 jump end_product
     else:
         $ s(_("Would you like me to go back over the practice problems?"), interact=False)
@@ -96,6 +98,8 @@ label tutorial_product:
             "Yes":
                 jump practice_product
             "No":
+                scene bg lecturehall
+                with fade 
                 jump end_product
                 
 label practice_product:
