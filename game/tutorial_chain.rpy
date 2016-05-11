@@ -67,8 +67,8 @@ label tutorial_chain:
     
 label chain_practice:
     
-    $ productTWrong = 0
-    $ productCWrong = 0
+    $ chainTWrong = 0
+    $ chainCWrong = 0
     
     s "Okay, I will write them down now."
     

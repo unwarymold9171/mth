@@ -43,22 +43,27 @@ label tutorial_product:
     scene bg FofXstarGofXlim
     with dissolve
     
-    s "From here,  we need to add a special form of zero. This will be in the form of -\u205Ff\(x\)\u205F*\u205Fg\(x\u205F+\u205F\u0394x\)\u205F+\u205Ff\(x\)\u205F*\u205Fg\(x\u205F+\u205F\u0394x\) all over \u0394x."
+    s "From here,  we need to add a special form of zero. This will be in the form of -\u205Ff\(x\)\u205F*\u205Fg\(x\u205F+\u205F\u0394x\)
+       \u205F+\u205Ff\(x\)\u205F*\u205Fg\(x\u205F+\u205F\u0394x\) all over \u0394x."
     
     scene bg FofXstarGofXlimPlusZero
     with dissolve
     
-    s "Now this can be symplified down changing it to \[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]\u205F*\u205Fg\(x\u205F+\u205F\u0394x\)\u205F+\u205Ff\(x\)\u205F*\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\] all over \u0394x."
+    s "Now this can be symplified down changing it to \[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]\u205F*\u205Fg\(
+       x\u205F+\u205F\u0394x\)\u205F+\u205Ff\(x\)\u205F*\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\] all over \u0394x."
     
     scene bg FofXstarGofXlimPlusZeroSymplefied
     with dissolve
     
-    s "From here, because when taking the limit of two things being added togeather we can split it into lim\(\[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]/\u0394x\u205F*\u205Fg\(x\u205F+\u205F\u0394x\)\)\u205F+\u205Flim\(f\(x\)\u205F*\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\]/\u0394x\)"
+    s "From here, because when taking the limit of two things being added togeather we can split it into lim
+       \(\[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]/\u0394x\u205F*\u205Fg\(x\u205F+\u205F\u0394x\)\)\u205F+\u205Flim
+       \(f\(x\)\u205F*\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\]/\u0394x\)"
     
     scene bg LotsOfSymplificationAndWhatHasHappenedToTheseVerableNames
     with dissolve
     
-    s "Now, we will be lim\(\[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]/\u0394x\u205F\)\u205F*\u205Flim\(\u205Fg\(x\u205F+\u205F\u0394x\)\)\u205F+\u205Flim\(f\(x\)\u205F\)\u205F*\u205Flim\(\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\]/\u0394x\)"
+    s "Now, we will be lim\(\[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]/\u0394x\u205F\)\u205F*\u205Flim\(\u205Fg\(x\u205F+\u205F\u0394x\)\)
+       \u205F+\u205Flim\(f\(x\)\u205F\)\u205F*\u205Flim\(\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\]/\u0394x\)"
     
     scene bg LotsOfSymplificationAndMoreSymplificationAndMakingMoreLongVerableNamesAgain
     with dissolve
