@@ -29,6 +29,9 @@ label tutorial_chain:
     
     s "The chain rule is used when you need to take the dervaderv of a function of a function, such as \(x + 1\)^2"
     s "The chain rule says that if f\(x\) = g\(h\(x\)\), then f'\(x\) = g'\(h\(x\)\) * h'\(x\)"
+    s "That means that for \(x + 1\)^2, f\(x\) would be \(x + 1\)^2, g\(x\) would be x^2, and h\(x\) would be \(x + 1\)" 
+    s "Thus, h'\(x\) would be \(x + 1\)', or 1, and g'\(h\(x\)\) would be \(\(x + 1\)^2\)', or 2\(x + 1\)" 
+    s "Therefor, f'\(x\) would be 1 * 2\(x + 1\), which is just 2\(x + 1\)"
     
     #practice problem with answers
     
