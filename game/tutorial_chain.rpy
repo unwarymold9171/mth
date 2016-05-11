@@ -27,18 +27,127 @@ label tutorial_chain:
     
     #explation of chain rule, using photos of whiteboards as backrounds
     
+    scene bg ChainDemo1
+    with fade
     s "The chain rule is used when you need to take the dervaderv of a function of a function, such as \(x + 1\)^2"
+    scene bg ChainDemo2
+    with dissolve
     s "The chain rule says that if f\(x\) = g\(h\(x\)\), then f'\(x\) = g'\(h\(x\)\) * h'\(x\)"
+    scene bg ChainDemo3
+    with dissolve
     s "That means that for \(x + 1\)^2, f\(x\) would be \(x + 1\)^2, g\(x\) would be x^2, and h\(x\) would be \(x + 1\)" 
+    scene bg ChainDemo4
+    with dissolve
     s "Thus, h'\(x\) would be \(x + 1\)', or 1, and g'\(h\(x\)\) would be \(\(x + 1\)^2\)', or 2\(x + 1\)" 
+    scene bg ChainDemo5
+    with dissolve
     s "Therefor, f'\(x\) would be 1 * 2\(x + 1\), which is just 2\(x + 1\)"
+    scene bg ChainDemo1
+    with dissolve
     
     #practice problem with answers
     
+    if mp.route == 0:
+        s "Okay, now onto practice the problems."
+        jump practice_product
+    elif mp.route == 10:
+        $ s(_("Would you like me to give practice problems?"), interact=False)
+        menu:
+            "Yes":
+                jump chain_practice
+            "No":
+                jump end_chain
+    else:
+        $ s(_("Would you like me to go back over the practice problems?"), interact=False)
+        menu:
+            "Yes":
+                jump chain_practice
+            "No":
+                jump end_chain
+    
+label chain_practice:
+    
+    $ productTWrong = 0
+    $ productCWrong = 0
+    
+    s "Okay, I will write them down now."
+    
+    scene bg Practice5
+    with fade
+        
+    s "Here are three practice problems to try out. "
+    extend "Try them out for yourself."
+    
+label chain_practice1:
+    
+    s "Here are the practice problems"
+    scene bg Practice5
+    with dissolve
+    $ s(_("What do you think the answer for A is?"), interact=False)
+    menu:
+        "Yes":
+            s "Correct!"
+            scene bg Practice6
+            with dissolve
+            $ chainCWrong = 0
+        "No":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+    $ s(_("What do you think the answer for B is?"), interact=False)
+    menu:
+        "Yes":
+            s "Correct!"
+            scene bg Practice7
+            with dissolve
+            $ chainCWrong = 0
+        "No":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+    $ s(_("What do you think the answer for C is?"), interact=False)
+    menu:
+        "Yes":
+            s "Correct!"
+            scene bg Practice8
+            with dissolve
+            $ chainCWrong = 0
+        "No":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+            
+    s "You got [chainTWrong] wrong answers."
+    
+    scene bg lecturehall
+    with fade 
+    
+    if chainTWrong == 0 and mp.option == "Student":
+        s "I think you are definitely ready for the next lesson."
+        jump end_chain
+    elif chainTWrong <= 3 and mp.option == "Student":
+        s "I think your ready for the next lesson."
+        jump end_chain
+    elif chainTWrong <= 6 and mp.option == "Student":
+        s "I think you should practice more before the next lesson."
+        jump end_chain
+    elif mp.option == "Student":
+        s "You need more practice before going onto the next lesson."
+        jump chain_practice1
+    elif chainTWrong == 0:
+        s "Cool, I guess onto another lesson."
+        jump end_chain
+    elif chainTWrong > 0:
+        s "How come you missed these problems?"
+        jump end_chain
+    else:
+        s "I have no clue what to say, you broke the system."
+    
     #additional explanation of incorrect answers
     
+label end_chain:
     if mp.route == 2:
         $ mp.route = 3
         $ mp.save()
-    
+
     jump tutorial
