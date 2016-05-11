@@ -170,7 +170,10 @@ label practice_product4:
     elif mp.option == "Student":
         s "You need more practice before going onto the next lesson."
         jump practice_product
-    elif productTWrong < 0:
+    elif productTWrong == 0:
+        s "Cool, I guess onto another lesson."
+        jump end_product
+    elif productTWrong > 0:
         s "How come you missed these problems?"
         jump end_product
     else:

@@ -1,10 +1,17 @@
 ﻿# You can place the script of your game in this file.
 
 # Declare images below this line, using the image statement.
-# eg. image eileen happy = "eileen_happy.png"
-
-# Declare characters used by this game.
-#define e = Character('Eileen', color="#c8ffc8")
+image bg QuotientDemo1 = im.FactorScale("QuotientWhiteBoard/DSCF1856.JPG", .281)
+image bg QuotientDemo2 = im.FactorScale("QuotientWhiteBoard/DSCF1857.JPG", .281)
+image bg QuotientDemo3 = im.FactorScale("QuotientWhiteBoard/DSCF1858.JPG", .281)
+image bg QuotientDemo4 = im.FactorScale("QuotientWhiteBoard/DSCF1859.JPG", .281)
+image bg QuotientDemo5 = im.FactorScale("QuotientWhiteBoard/DSCF1860.JPG", .281)
+image bg QuotientDemo6 = im.FactorScale("QuotientWhiteBoard/DSCF1861.JPG", .281)
+image bg QuotientDemo7 = im.FactorScale("QuotientWhiteBoard/DSCF1862.JPG", .281)
+image bg Practice9 = im.FactorScale("QuotientWhiteBoard/DSCF1864.JPG", .281)
+image bg Practice10 = im.FactorScale("QuotientWhiteBoard/DSCF1865.JPG", .281)
+image bg Practice11 = im.FactorScale("QuotientWhiteBoard/DSCF1866.JPG", .281)
+image bg Practice12 = im.FactorScale("QuotientWhiteBoard/DSCF1867.JPG", .281)
 
 # The game starts here.
 label tutorial_quotient:

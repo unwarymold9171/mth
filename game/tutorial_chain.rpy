@@ -4,6 +4,17 @@
 #       git gud                       #
 #######################################
 
+# Declare images below this line, using the image statement.
+image bg ChainDemo1 = im.FactorScale("ChainWhiteBoard/DSCF1847.JPG", .281)
+image bg ChainDemo2 = im.FactorScale("ChainWhiteBoard/DSCF1848.JPG", .281)
+image bg ChainDemo3 = im.FactorScale("ChainWhiteBoard/DSCF1849.JPG", .281)
+image bg ChainDemo4 = im.FactorScale("ChainWhiteBoard/DSCF1850.JPG", .281)
+image bg ChainDemo5 = im.FactorScale("ChainWhiteBoard/DSCF1851.JPG", .281)
+image bg Practice5 = im.FactorScale("ChainWhiteBoard/DSCF1852.JPG", .281)
+image bg Practice6 = im.FactorScale("ChainWhiteBoard/DSCF1853.JPG", .281)
+image bg Practice7 = im.FactorScale("ChainWhiteBoard/DSCF1854.JPG", .281)
+image bg Practice8 = im.FactorScale("ChainWhiteBoard/DSCF1855.JPG", .281)
+
 # The route starts here.
 label tutorial_chain:
 
