@@ -29,7 +29,7 @@ label tutorial_chain:
     
     scene bg ChainDemo1
     with fade
-    s "The chain rule is used when you need to take the dervaderv of a function of a function, such as \(x + 1\)^2"
+    s "The chain rule is used when you need to take the derivative of a function of a function, such as \(x + 1\)^2"
     scene bg ChainDemo2
     with dissolve
     s "The chain rule says that if f\(x\) = g\(h\(x\)\), then f'\(x\) = g'\(h\(x\)\) * h'\(x\)"

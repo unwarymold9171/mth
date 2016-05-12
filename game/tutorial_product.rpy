@@ -26,7 +26,7 @@ label tutorial_product:
     scene bg blank
     with fade
     
-    s "The product rule looks at the dervaderv of two fuctions mutiplied by each other. "
+    s "The product rule looks at the derivative of two fuctions mutiplied by each other. "
     extend "In this we will start by saying f\(x\)\u205F*\u205Fg\(x\) = h\(x\)."
     
     scene bg HofX
@@ -68,8 +68,8 @@ label tutorial_product:
     scene bg LotsOfSymplificationAndMoreSymplificationAndMakingMoreLongVerableNamesAgain
     with dissolve
     
-    s "Now that it is in this form, we can see lim\(\[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]/\u0394x\u205F\) and this equals the dervaderve of f\(x\);
-       the same goes for lim\(\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\]/\u0394x\) equaling the dervaderve of g\(x\). 
+    s "Now that it is in this form, we can see lim\(\[f\(x\u205F+\u205F\u0394x\)\u205F-\u205Ff\(x\)\]/\u0394x\u205F\) and this equals the derivativee of f\(x\);
+       the same goes for lim\(\u205F\[g\(x\u205F+\u205F\u0394x\)\u205F-\u205Fg\(x\)\]/\u0394x\) equaling the derivativee of g\(x\). 
        There is also lim\(\u205Fg\(x\u205F+\u205F\u0394x\) and this just equals g\(x\)."
     
     scene bg FingDoneWithTheseLongNamesForThePicturesOfAWhiteBoardProvingTheProductRuleFinalPicture

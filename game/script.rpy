@@ -80,13 +80,13 @@ label start:
             $ mp.save()
         
         
-        s "Hi! My name is [mp.sName], and I'd like to welcome you to mth dervaderv tutorial."
+        s "Hi! My name is [mp.sName], and I'd like to welcome you to mth derivative tutorial."
         
         if mp.route == 0:
             s "What is your name?" 
             p "My name is [mp.playerName]."
         
-        s "Okay, [mp.playerName]. In this tutorial, we'll teach the Product Rule, Quotient Rule, and Chain Rule, so you can practice these dervadervs on your own."
+        s "Okay, [mp.playerName]. In this tutorial, we'll teach the Product Rule, Quotient Rule, and Chain Rule, so you can practice these derivatives on your own."
     else:
         s "Welcome back, [mp.playerName]. "
         if mp.route == 1:
