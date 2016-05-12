@@ -112,19 +112,29 @@ label practice_product:
     scene bg Practice1
     with fade
         
-    s "Here are three practice problems to try out. "
+    s "Here are three practice problems. "
     extend "Try them out for yourself."
     
 label practice_product1:
     $ s(_("What do you think the answer for A is?"), interact=False)
     menu:
-        "Yes":
+        "f'(x)=(2x)sin(x)+(x^2)cos(x)":
             s "Correct!"
             scene bg Practice2
             with dissolve
             $ productCWrong = 0
             jump practice_product2
-        "No":
+        "f'(x)=(2x)cos(x)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product1
+        "f'(x)=(x^2)cos(x)-(2x)sin(x)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product1
+        "f'(x)=(x^2)sin(x)+(2x)cos(x)":
             s "Wrong try again"
             $ productTWrong += 1
             $ productCWrong += 1
@@ -133,13 +143,23 @@ label practice_product1:
 label practice_product2:
     $ s(_("What do you think the answer for B is?"), interact=False)
     menu:
-        "Yes":
+        "h'(x)=x(8x-1)(3x-16)+x(x^3-8x^2+12)(4x-1)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product2
+        "h'(x)=(8x-1)(3x^2-16x)+(x^3-8x^2+12)(4x^2-x)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product2
+        "h'(x)=(8x-1)(x^3-8x^2+12)+(4x^2-x)(3x^2-16x)":
             s "Correct!"
             scene bg Practice3
             with dissolve
             $ productCWrong = 0
             jump practice_product3
-        "No":
+        "h'(x)=(8x-1)(3x^2-16x)":
             s "Wrong try again"
             $ productTWrong += 1
             $ productCWrong += 1
@@ -148,13 +168,23 @@ label practice_product2:
 label practice_product3:
     $ s(_("What do you think the answer for C is?"), interact=False)
     menu:
-        "Yes":
+        "g'(t)=(3t^2)(e^t)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product3
+        "g'(t)=(t^2)(e^t)+(t^3)(e^t)":
             s "Correct!"
             scene bg Practice4
             with dissolve
             $ productCWrong = 0
             jump practice_product4
-        "No":
+        "g'(t)=2(t^3)(e^t)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product3
+        "g'(t)=2(e^t)((3t^2)+(t^3))":
             s "Wrong try again"
             $ productTWrong += 1
             $ productCWrong += 1
