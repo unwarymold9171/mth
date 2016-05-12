@@ -83,35 +83,63 @@ label chain_practice1:
     s "Here are the practice problems"
     scene bg Practice5
     with dissolve
-    $ s(_("What do you think the answer for A is?"), interact=False)
+    $ s(_("What do you think the answer for the A is?"), interact=False)
     menu:
-        "Yes":
+        "8tan^4(x)sec^2(x)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+        "4tan^3(x)sec^2(x)":
             s "Correct!"
             scene bg Practice6
             with dissolve
             $ chainCWrong = 0
-        "No":
+        "4sec^6(x)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+        "4tan^3(x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
     $ s(_("What do you think the answer for B is?"), interact=False)
     menu:
-        "Yes":
+        "-sin(x^3+3x^2+4x)(3x^2+6x+4)(6x+6)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+        "sin(x^3+3x^2+4x)(3x^2+6x+4)(6x+6)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+        "-sin(x^3+3x^2+4x)(3x^2+6x+4)":
             s "Correct!"
             scene bg Practice7
+            with dissolve
+            $ chainCWrong = 0
+        "sin(x^3+3x^2+4x)(3x^2+6x+4)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+        "-sin(x^3+3x^2+4x)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+    $ s(_("What do you think the answer for C is?"), interact=False)
+    menu:
+        "-4(x^3+7x)(3x^2+7)(sin(x^3+5e^x))(3x^2+5e^x)":
+            s "Wrong try again"
+            $ chainTWrong += 1
+            $ chainCWrong += 1
+        "4(":
+            s "Correct!"
+            scene bg Practice8
             with dissolve
             $ chainCWrong = 0
         "No":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
-    $ s(_("What do you think the answer for C is?"), interact=False)
-    menu:
-        "Yes":
-            s "Correct!"
-            scene bg Practice8
-            with dissolve
-            $ chainCWrong = 0
         "No":
             s "Wrong try again"
             $ chainTWrong += 1
@@ -146,6 +174,10 @@ label chain_practice1:
     #additional explanation of incorrect answers
     
 label end_chain:
+    
+    scene bg lecturehall
+    with fade
+    
     if mp.route == 2:
         $ mp.route = 3
         $ mp.save()
