@@ -23,15 +23,50 @@ label tutorial_quotient:
     else:
         s "So, you want to review the quotient rule."
     
-    s "Okay, have you ever had a problem where you have to take the derivative of a function over another function?"
+    scene bg QuotientDemo1
+    with fade
     
-    s "You will end up having another fraction for the dervative, however, it will not be the same."
+    s "The Quotient Rule can be used to take the dervderv of a fraction with two functions over each other such as f(x) = g(x)/u(x)."
     
-    s"A simple way to remember the quotient rule is this little ryhme. Low d high, less high d low, and don't forget to square below."
+    scene bg QuotientDemo2
+    with dissolve
     
-    # p "Yeah...I've had to do a few of those."
-    # p ""
+    s ""
     
+    scene bg QuotientDemo3
+    with dissolve
+    
+    s ""
+    
+    scene bg QuotientDemo4
+    with dissolve
+    
+    s ""
+    
+    scene bg QuotientDemo5
+    with dissolve
+    
+    s ""
+    
+    scene bg QuotientDemo6
+    with dissolve
+    
+    s ""
+    
+    scene bg QuotientDemo7
+    with dissolve
+    
+    s ""
+    
+   
+    s "A simple way to remember the quotient rule is this little ryhme. Low d high, less high d low, and don't forget to square below."
+    
+    scene bg lecturehall
+    with fade
+    jump end_quotient
+    
+label end_quotient:
+
     if mp.route == 1:
         $ mp.route = 2
         $ mp.save()
