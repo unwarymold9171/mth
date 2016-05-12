@@ -83,12 +83,14 @@ label chain_practice1:
     s "Here are the practice problems"
     scene bg Practice5
     with dissolve
+label chain_practice2:
     $ s(_("What do you think the answer for the A is?"), interact=False)
     menu:
         "8tan^4(x)sec^2(x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice2
         "4tan^3(x)sec^2(x)":
             s "Correct!"
             scene bg Practice6
@@ -98,20 +100,25 @@ label chain_practice1:
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice2
         "4tan^3(x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice2
+label chain_practice3:
     $ s(_("What do you think the answer for B is?"), interact=False)
     menu:
         "-sin(x^3+3x^2+4x)(3x^2+6x+4)(6x+6)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice3
         "sin(x^3+3x^2+4x)(3x^2+6x+4)(6x+6)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice3
         "-sin(x^3+3x^2+4x)(3x^2+6x+4)":
             s "Correct!"
             scene bg Practice7
@@ -121,29 +128,35 @@ label chain_practice1:
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice3
         "-sin(x^3+3x^2+4x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice3
+label chain_practice4:
     $ s(_("What do you think the answer for C is?"), interact=False)
     menu:
-        "((x^3+7x)^4)cos(x^3+5e^x)-4(x^3+7x)^3(3x^2+7)sin(x^3+5e^x)(3x^2+5e^x)":
+        "((x^3+7x)^4)cos(x^3+5e^x)- 4(x^3+7x)^3(3x^2+7)sin(x^3+5e^x)*(3x^2+5e^x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
-        "4(x^3+7x)^3(3x^2+7)cos(x^3+5e^x)-(x^3+7x)^4sin(x^3+5e^x)(3x^2+5e^x)":
+            jump chain_practice4
+        "4(x^3+7x)^3(3x^2+7)cos(x^3+5e^x)- (x^3+7x)^4sin(x^3+5e^x)(3x^2+5e^x)":
             s "Correct!"
             scene bg Practice8
             with dissolve
             $ chainCWrong = 0
-        "4(x^3+7x)^3(3x^2+7)cos(x^3+5e^x)+(x^3+7x)^4sin(x^3+5e^x)(3x^2+5e^x)":
+        "4(x^3+7x)^3(3x^2+7)cos(x^3+5e^x)+ (x^3+7x)^4sin(x^3+5e^x)(3x^2+5e^x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
-        "-4(x^3+7x)(3x^2+7)(sin(x^3+5e^x))(3x^2+5e^x)":
+            jump chain_practice4
+        "-4(x^3+7x)*(3x^2+7)*(sin(x^3+5e^x))*(3x^2+5e^x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
+            jump chain_practice4
             
     s "You got [chainTWrong] wrong answers."
     
