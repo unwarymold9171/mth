@@ -80,7 +80,7 @@ label start:
             $ mp.save()
         
         
-        s "Hi! My name is [mp.sName], and I'd like to welcome you to mth derivative tutorial."
+        s "Hi! My name is [mp.sName], and I'd like to welcome you to math derivative tutorial."
         
         if mp.route == 0:
             s "What is your name?" 
