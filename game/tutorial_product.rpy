@@ -118,13 +118,23 @@ label practice_product:
 label practice_product1:
     $ s(_("What do you think the answer for A is?"), interact=False)
     menu:
-        "Yes":
+        "f'(x)=(2x)sin(x)+(x^2)cos(x)":
             s "Correct!"
             scene bg Practice2
             with dissolve
             $ productCWrong = 0
             jump practice_product2
-        "No":
+        "f'(x)=(2x)cos(x)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product1
+        "f'(x)=(x^2)cos(x)-(2x)sin(x)":
+            s "Wrong try again"
+            $ productTWrong += 1
+            $ productCWrong += 1
+            jump practice_product1
+        "f'(x)=(x^2)sin(x)+(2x)cos(x)":
             s "Wrong try again"
             $ productTWrong += 1
             $ productCWrong += 1
