@@ -127,20 +127,20 @@ label chain_practice1:
             $ chainCWrong += 1
     $ s(_("What do you think the answer for C is?"), interact=False)
     menu:
-        "-4(x^3+7x)(3x^2+7)(sin(x^3+5e^x))(3x^2+5e^x)":
+        "((x^3+7x)^4)cos(x^3+5e^x)-4(x^3+7x)^3(3x^2+7)sin(x^3+5e^x)(3x^2+5e^x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
-        "4(":
+        "4(x^3+7x)^3(3x^2+7)cos(x^3+5e^x)-(x^3+7x)^4sin(x^3+5e^x)(3x^2+5e^x)":
             s "Correct!"
             scene bg Practice8
             with dissolve
             $ chainCWrong = 0
-        "No":
+        "4(x^3+7x)^3(3x^2+7)cos(x^3+5e^x)+(x^3+7x)^4sin(x^3+5e^x)(3x^2+5e^x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
-        "No":
+        "-4(x^3+7x)(3x^2+7)(sin(x^3+5e^x))(3x^2+5e^x)":
             s "Wrong try again"
             $ chainTWrong += 1
             $ chainCWrong += 1
