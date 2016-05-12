@@ -72,7 +72,7 @@ label start:
                 $ mp.playerName = mp.sName
             if mp.playerName == "Kouhai":
                 $ mp.playerName = "Kōhai"
-            if mp.playerName.lower() == "lenny face":
+            if mp.playerName.lower() == "[lenny face]":
                 $ mp.playerName = u"\u0028\u00B0\u0361 \u035C\u0296\u00B0\u0361 \u0029"
             $ mp.save()
         else:
