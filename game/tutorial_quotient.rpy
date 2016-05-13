@@ -31,35 +31,37 @@ label tutorial_quotient:
     scene bg QuotientDemo2
     with dissolve
     
-    s ""
+    s "Here you have the function f."
     
     scene bg QuotientDemo3
     with dissolve
     
-    s ""
+    s "To set up the Quotient Rule you need to take the top of the fraction and multiply it by the derivative of the bottom. You then subtract that from the bottom multiplied by the derivative of the top, all divided by the bottom squared."
     
     scene bg QuotientDemo4
     with dissolve
     
-    s ""
+    s "Once you have done that, you will need to make it so that the fraction can be simplified. In order to do this, you will need to expand the top and bottom functions."
     
     scene bg QuotientDemo5
     with dissolve
     
-    s ""
+    s "Once you have the expanded forms you can start combining like terms."
     
     scene bg QuotientDemo6
     with dissolve
     
-    s ""
+    s "You can stop here or continue simplefiing down."
     
     scene bg QuotientDemo7
     with dissolve
     
-    s ""
+    s "And this is the final form."
     
    
     s "A simple way to remember the quotient rule is this little ryhme. Low d high, less high d low, and don't forget to square below."
+    
+    
     
     scene bg lecturehall
     with fade
