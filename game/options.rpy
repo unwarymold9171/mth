@@ -13,7 +13,7 @@ init -1 python hide:
     ## set to False before the game is released, so the user can't
     ## cheat using developer tools.
 
-    config.developer = True
+    config.developer = False
 
     ## These control the width and height of the screen.
 
@@ -23,12 +23,12 @@ init -1 python hide:
     ## This controls the title of the window, when Ren'Py is
     ## running in a window.
 
-    config.window_title = u"mth"
+    config.window_title = u"Calculus Derivatives"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "mth"
-    config.version = "0.0"
+    config.version = "1.0"
 
     #########################################
     # Themes
@@ -161,11 +161,11 @@ init -1 python hide:
 
     ## Set this to False if the game does not have any sound effects.
 
-    config.has_sound = True
+    config.has_sound = False
 
     ## Set this to False if the game does not have any music.
 
-    config.has_music = True
+    config.has_music = False
 
     ## Set this to True if the game has voicing.
 
@@ -295,7 +295,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "Calculus-1.0"
+    build.directory_name = "Calculus-1.0.1"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
